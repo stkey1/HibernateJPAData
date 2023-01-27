@@ -1,0 +1,9 @@
+org\hibernate\Main.class
+App\App.class
+Entity\Identity.class
+Service\DenemeService.class
+Entity\Ogretmen.class
+Utils\HibernateUtil.class
+Entity\Address.class
+Entity\Ders.class
+Entity\Ogrenci.class
