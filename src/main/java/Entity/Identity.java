@@ -1,8 +1,10 @@
 package Entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "identity")
 public class Identity {
     @Id
@@ -18,12 +20,4 @@ public class Identity {
 
     @OneToOne
     private Ogretmen ogretmen;
-
-    public Integer getIdentity() {
-        return identity;
-    }
-
-    public void setIdentity(Integer identity) {
-        this.identity = identity;
-    }
 }

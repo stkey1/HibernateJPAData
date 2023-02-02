@@ -1,7 +1,10 @@
 package Entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 @Entity
+@Data
 @Table(name = "address")
 public class Address {
     @Id
@@ -31,50 +34,6 @@ public class Address {
 
     @Transient
     private String postaKodu2;
-
-    public String getCadde() {
-        return cadde;
-    }
-
-    public void setCadde(String cadde) {
-        this.cadde = cadde;
-    }
-
-    public String getSokak() {
-        return sokak;
-    }
-
-    public void setSokak(String sokak) {
-        this.sokak = sokak;
-    }
-
-    public Integer getKapiNo() {
-        return kapiNo;
-    }
-
-    public void setKapiNo(Integer kapiNo) {
-        this.kapiNo = kapiNo;
-    }
-
-    public String getIlce() {
-        return ilce;
-    }
-
-    public void setIlce(String ilce) {
-        this.ilce = ilce;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getPostaKodu() {
-        return postaKodu;
-    }
-
-    public void setPostaKodu(String postaKodu) {
-        this.postaKodu = postaKodu;
-    }
 
 }
 

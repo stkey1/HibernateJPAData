@@ -1,12 +1,14 @@
 package Entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.hibernate.annotations.Cascade;
 
 import java.util.Set;
 
 
 @Entity
+@Data
 @Table(name = "ogretmen")
 public class Ogretmen {
     @Id
@@ -36,10 +38,6 @@ public class Ogretmen {
     @ManyToOne
     @JoinColumn(name = "ders_id",nullable = true)
     private Ders ders;
-
-    public Integer getId() {
-        return id;
-    }
 
     public String getName() {
         return name;

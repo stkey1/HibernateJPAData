@@ -1,10 +1,12 @@
 package Entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Set;
 
 @Entity
+@Data
 @Table(name = "ders")
 public class Ders {
     @Id
@@ -21,16 +23,5 @@ public class Ders {
     @OneToMany(mappedBy = "ders")
     private Set<Ogretmen> ogretmen;
 
-    public  String getDers(){
-        return ders;
-    }
-
-    public void setDers(String ders){
-        this.ders = ders;
-    }
-
-    public Integer getId() {
-        return id;
-    }
 
 }
