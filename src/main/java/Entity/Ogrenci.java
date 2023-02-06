@@ -35,10 +35,12 @@ public class Ogrenci {
     private Identity identity;
 
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "ders_id",nullable = false)
     private Ders ders;
 
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "ogretmen_id",nullable = false)
     private Ogretmen ogretmen;
 

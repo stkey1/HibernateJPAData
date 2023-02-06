@@ -22,12 +22,12 @@ public class Ogretmen {
     @Column(name = "surname")
     private String surname;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "identity_id", referencedColumnName = "id")
     @Cascade(value = org.hibernate.annotations.CascadeType.ALL)
     private Identity identity;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     @Cascade(value = org.hibernate.annotations.CascadeType.ALL)
     private Address address;
@@ -36,7 +36,8 @@ public class Ogretmen {
     private Set<Ogrenci> ogrenci;
 
     @ManyToOne
-    @JoinColumn(name = "ders_id",nullable = true)
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @JoinColumn(name = "ders_id",nullable = false)
     private Ders ders;
 
     public String getName() {
