@@ -36,24 +36,29 @@ public class OgrenciService {
         address.setCadde("1123");
         address.setKapiNo(12);
 
-        Ogretmen ogretmen = new Ogretmen();
-        ogretmen.setName("Mahmut");
-        //ogretmen-öğrenci olması lazım
-        ogretmen.setSurName("M");
-
-        Ogretmen ogretmen2 = new Ogretmen();
-        ogretmen2.setName("Mahmut1");
-        //ogretmen-öğrenci olması lazım
-        ogretmen2.setSurName("M1");
-
         Identity identity = new Identity();
         identity.setIdentity(21313);
 
         Identity identity1 = new Identity();
         identity1.setIdentity(1121313);
-        Ders ders = new Ders();
 
+        Ders ders = new Ders();
+        ders.setDers("Matematik");
         Ders ders1 = new Ders();
+        ders1.setDers("Türkçe");
+
+        Ogretmen ogretmen = new Ogretmen();
+        ogretmen.setName("Mahmut");
+        //ogretmen-öğrenci olması lazım
+        ogretmen.setSurName("M");
+        ogretmen.setDers(ders);
+
+        Ogretmen ogretmen2 = new Ogretmen();
+        ogretmen2.setName("Mahmut1");
+        //ogretmen-öğrenci olması lazım
+        ogretmen2.setSurName("M1");
+        ogretmen2.setDers(ders1);
+
         //address.getOgrenci().getAddress(), identity.getOgrenci().getIdentity(), ders.getDers(), ogretmen.getIdentity().getOgretmen()
         Ogrenci ogrenci = new Ogrenci("Mustafa", "Dere", 2,address, identity, ders, ogretmen );
         Ogrenci ogrenci2 = new Ogrenci("Mustafa2", "Dere2", 3, address1, identity1, ders, ogretmen2);

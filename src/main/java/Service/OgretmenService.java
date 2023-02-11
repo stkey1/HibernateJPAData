@@ -1,5 +1,6 @@
 package Service;
 
+import Entity.Ders;
 import Entity.Ogretmen;
 import Utils.HibernateUtil;
 import org.hibernate.Session;
@@ -24,9 +25,17 @@ public class OgretmenService {
         Ogretmen ogretmen = new Ogretmen();
         ogretmen.setName("Hasan");
         ogretmen.setSurName("Huseyin");
+
         Ogretmen ogretmen2 = new Ogretmen();
         ogretmen2.setSurName("selami");
         ogretmen2.setName("selam");
+
+        Ders ders = new Ders();
+        ders.setDers("Matematik");
+
+        ogretmen.setDers(ders);
+        ogretmen2.setDers(ders);
+
         Set<Ogretmen> ogretmenSet = new HashSet<>();
         ogretmenSet.add(ogretmen);
         ogretmenSet.add(ogretmen2);
