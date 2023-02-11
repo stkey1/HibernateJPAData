@@ -21,13 +21,42 @@ import java.util.Set;
 @Service
 public class OgrenciService {
     public void add(){
+
         Address address = new Address();
-        Identity identity = new Identity();
-        Ders ders = new Ders();
+        address.setSokak("Aşağı");
+        address.setPostaKodu("334");
+        address.setCadde("123");
+        address.setIlce("Keçiören");
+        address.setKapiNo(12);
+
+        Address address1 = new Address();
+        address1.setIlce("Pursaklar");
+        address.setSokak("AşağıYurtçu");
+        address.setPostaKodu("1334");
+        address.setCadde("1123");
+        address.setKapiNo(12);
+
         Ogretmen ogretmen = new Ogretmen();
+        ogretmen.setName("Mahmut");
+        //ogretmen-öğrenci olması lazım
+        ogretmen.setSurName("M");
+
+        Ogretmen ogretmen2 = new Ogretmen();
+        ogretmen2.setName("Mahmut1");
+        //ogretmen-öğrenci olması lazım
+        ogretmen2.setSurName("M1");
+
+        Identity identity = new Identity();
+        identity.setIdentity(21313);
+
+        Identity identity1 = new Identity();
+        identity1.setIdentity(1121313);
+        Ders ders = new Ders();
+
+        Ders ders1 = new Ders();
         //address.getOgrenci().getAddress(), identity.getOgrenci().getIdentity(), ders.getDers(), ogretmen.getIdentity().getOgretmen()
         Ogrenci ogrenci = new Ogrenci("Mustafa", "Dere", 2,address, identity, ders, ogretmen );
-        Ogrenci ogrenci2 = new Ogrenci("Mustafa2", "Dere2", 3, address, identity, ders, ogretmen);
+        Ogrenci ogrenci2 = new Ogrenci("Mustafa2", "Dere2", 3, address1, identity1, ders, ogretmen2);
         Set<Ogrenci> ogrenciSet=new HashSet<>();
         ogrenciSet.add(ogrenci);
         ogrenciSet.add(ogrenci2);

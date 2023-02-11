@@ -20,6 +20,7 @@ public class DersService {
     public void add(){
         Ders ders = new Ders();
         ders.setDers("Matematik");
+        ders.setDers("Türkçe");
         Session session= HibernateUtil.getSessionFactory().openSession();
         Transaction tx= session.beginTransaction();
         session.persist(ders);
